@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.covinoc.utils.ClienteNombreInvalidoException;
 import com.covinoc.models.Cliente;
 import com.covinoc.repositorys.ClienteRepository;
 
@@ -21,6 +22,9 @@ public class ClienteService {
     }
 
     public Cliente crearCliente(Cliente cliente) {
+    	if (cliente.getNombre() == null) {
+            throw new ClienteNombreInvalidoException();
+        }
         return clienteRepository.save(cliente);
     }
 
