@@ -13,9 +13,12 @@ import com.covinoc.models.LoginRequest;
 import com.covinoc.services.AuthService;
 import com.covinoc.utils.AuthenticationException;
 
+import io.swagger.annotations.ApiOperation;
+
 
 @RestController
 @RequestMapping("/auth")
+@ApiOperation(value = "auth")
 public class AuthController {
 	
 	private final AuthService authService;

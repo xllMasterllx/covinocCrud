@@ -7,7 +7,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.security.Keys;
 
 import org.springframework.beans.factory.annotation.Value;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import com.covinoc.models.LoginRequest;
@@ -20,7 +19,6 @@ import javax.crypto.SecretKey;
 
 //generar, validar y gestionar tokens JWT
 @Component
-@RequiredArgsConstructor
 public class JwtTokenProvider {
 
 	private SecretKey secretKey;

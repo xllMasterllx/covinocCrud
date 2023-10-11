@@ -15,8 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.covinoc.models.Cliente;
 import com.covinoc.services.ClienteService;
 
+import io.swagger.annotations.ApiOperation;
+
 @RestController
 @RequestMapping("/clientes")
+@ApiOperation(value = "clientes")
 public class ClienteController {
 	
 	//Crud completo de cliente
