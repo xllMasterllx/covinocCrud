@@ -1,0 +1,31 @@
+# SpringBoot-CRUD-Cliente
+
+Este proyecto de Spring Boot implementa un simple CRUD (Crear, Leer, Actualizar, Eliminar) para gestionar clientes. Utiliza Java 11 y Spring Boot 2.7.16 como plataforma de desarrollo y PostgreSQL 16 como sistema de gestión de bases de datos.
+
+## Requisitos
+
+- Java 11
+- Spring Boot 2.7.16
+- PostgreSQL 16
+
+## Configuración de la Base de Datos
+
+Para ejecutar este proyecto, asegúrate de tener una base de datos PostgreSQL 16 configurada. Puedes utilizar la siguiente instrucción SQL para crear la tabla necesaria en tu base de datos:
+
+```sql
+CREATE TABLE clientes (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(255) NOT NULL,
+    apellidos VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+## Endpoints
+
+La aplicación proporciona los siguientes endpoints para gestionar clientes:
+
+- `GET /clientes`: Obtiene una lista de todos los clientes.
+- `GET /clientes/{id}`: Obtiene un cliente específico por su ID.
+- `POST /clientes`: Crea un nuevo cliente.
+- `PUT /clientes/{id}`: Actualiza un cliente existente.
+- `DELETE /clientes/{id}`: Elimina un cliente por su ID.
